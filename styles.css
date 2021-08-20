@@ -1,16 +1,24 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap');
+
+/*----------    font-family: 'Bebas Neue', cursive;
+font-family: 'Montserrat', sans-serif;      --------*/
+
+
 * {
     margin: 0;
     box-sizing: border-box;
+    padding: 0;
 }
 
 body {
-    font-family: sans-serif;
-    padding: 60px 40px 0;
+    font-family: 'Bebas Neue', cursive;
+
 }
 
 .header {
-    background-color: gray;
-    height: 50px;
+    background-color: rgba(255, 255, 255, 0.3);
+    height: 80px;
     /*fijamos el navbar a la pagina*/
     position: fixed;
     width: 100%;
@@ -30,14 +38,16 @@ body {
 
 .nav_link {
     color: white;
+    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.4));
     text-decoration: none;
+    letter-spacing: 0.15em;
+
 }
 
 .logo {
-    font-size: 30px;
-    font-weight: bold;
+    height: 80px;
     padding: 0 40px;
-    line-height: 50px;
+    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.3));
 }
 
 .nav_menu {
@@ -47,9 +57,9 @@ body {
 }
 
 .nav_menu_item {
-    font-size: 15px;
+    font-size: 18px;
     margin: 0 10px;
-    line-height: 50px;
+    line-height: 80px;
     text-transform: uppercase;
     width: max-content;
 }
@@ -60,7 +70,7 @@ body {
 }
 
 .nav_menu_link:hover {
-    background-color: #626567;
+    color: #626567;
     transition: 0.5s;
 }
 
@@ -74,13 +84,61 @@ body {
     display: none;
 }
 
+#showcase {
+    background-image: url(img/landing_page.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 40px 0px;
+}
+
+
+#showcase h1 {
+  text-align: center;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.4));
+  font-size: 50px;
+  color: 	rgba(255, 255, 255, 0.8);
+  letter-spacing: 0.25em;
+}
+
+#showcase p {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 20px;
+  padding: 30px 100px;
+  color: 	rgba(255, 255, 255, 0.8);
+
+}
+/*-----------------button------------*/
+#showcase .button {
+    font-size: 18px;
+    text-decoration: none;
+    color: 	rgba(255, 255, 255, 0.8);
+    border: rgba(255, 255, 255, 0.8) 1px solid;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    letter-spacing: 0.15em;
+
+}
+
+#showcase .button:hover {
+  background: rgba(255, 255, 255, 0.8);
+  color: grey;
+  transition: 0.5s;
+
+}
+
+
+/*----------------------Media Query--------------------*/
+
+
 @media (max-width: 768px) {
     body {
-        padding-top: 40px;
-    }
-
-    .header {
-        height: 60px;
     }
 
     .logo {
